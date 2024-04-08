@@ -1,0 +1,408 @@
+:root{
+    --darkjaman-color:#9333ea;
+    --lightjaman-color:#a855f7;
+    --darktext:rgb(52, 45, 45);
+    --lighttext:grey;
+    --min-width:1200px;
+   --bordercolor:#ca8a04;
+   --hoverbg:#faf5ff;
+}
+*{
+    margin:0;
+    border:0;
+}
+/*-------------------Menu Bar---------------------*/
+nav{
+    width:100%;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content:space-between;
+    position: fixed;
+    background-color: transparent;
+}
+
+ul{
+    display: flex;
+    
+}
+ul li{
+    list-style: none;
+    margin-right: 15px; 
+    font-size: 1.5rem;
+    
+}
+ul li a{
+    text-decoration: none;
+    color:white;
+    font-weight: 400;
+}
+ul li a:hover{
+    cursor: pointer;
+    color:wheat;
+    border-top: 2px solid var(--bordercolor);
+    border-bottom: 2px solid var(--bordercolor);
+    transition: 2s all ease-in-out;
+}
+
+#check{
+    display: none;
+}
+.iconhai{
+    display: none;
+}
+@media (width < 800px){
+    nav{
+        position: fixed;
+        z-index: 2;
+    }
+    nav .iconhai{
+        display: block;
+        color:#ABB2B9;
+        font-size: 40px;
+    }
+     nav ul{
+        position: absolute;
+        height: 90vh;
+         top:70px;
+        left:-100%;
+        flex-direction: column;
+        background-color: #faf5ff;
+        border-radius:10px;
+        align-items: center;
+        justify-content: center;
+        gap:2.5rem;
+        transition: all 1.5s;
+
+    }
+ 
+     nav ul li a{
+       font-size: 3rem;
+       color:var(--lighttext);  
+    }
+   nav #check:checked~ul{
+    transition: all 1.5s;
+     left:0;
+   }
+ 
+
+}
+/*-------------------Content-----------------------*/
+.content_boundary{
+    width:100%;
+    background-image:linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)) ,url("pexels-andrea-piacquadio-974911.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 90vh;
+     display: flex;
+     align-items: center;
+}
+.inner_text{
+    margin-left: 100px;
+    position: absolute;
+    z-index: 1;
+}
+.inner_text h3{
+  color:white;
+  letter-spacing: 3px;
+  margin-bottom: 10px;
+  font-size: 2rem;
+}
+.inner_text h1{
+    color:rgb(14, 220, 151);
+    font-size: 3rem;
+    margin-bottom: 10px;
+}
+.inner_text p{
+    color: white;
+    letter-spacing: 3px;
+    margin-bottom: 10px;
+}
+.inner_text button{
+    margin-top: 5px;
+    background-color:#9333ea;
+    font-size: 2.5rem;
+    width:150px;
+    padding: 5px;
+    border: 0;
+    outline: 0;
+    color:white;
+    font-weight: bolder;
+    border-radius: 15px;
+}
+@media (width < 500px){
+    .content_boundary{
+        
+        height:60vh;
+    }
+    .inner_text{
+        margin-left: 40px;
+        position: absolute;
+    }
+    .inner_text h1{
+        font-size: 2rem;
+    }
+}
+@media (width < 400px){
+    /*----content boundary ---*/
+    .content_boundary{
+        
+        height:50vh;
+    }
+    .content_boundary .inner_text h3{
+        font-size:1.2rem ;
+    }
+    .content_boundary .inner_text h1{
+        font-size: 1.6rem;
+
+    }
+    .content_boundary .inner_text p{
+        font-size: 1rem;
+    }
+    .content_boundary .inner_text button{
+        width:100px;
+        font-size: 1.5rem;
+    }
+    .inner_text{
+        margin-left:3px;
+        position: absolute;
+    }
+/*----------------------*/
+ 
+ 
+}
+/*--------------------------About us Page-----------------*/
+.aboutus{
+    text-align: center;
+    font-size: 1.5rem;
+    color:var(--bordercolor);
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+#aboutus_boundary{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 3.5rem;
+}
+.image_about img{
+    width:300px;
+    height: 300px;
+}
+/*Customer ka para graph*/
+.para_div_cus p{
+  width:100%;
+}
+/*-------------------*/
+.content_about{
+    width:35%;
+    
+}
+.content_about p{
+    
+    color:var(--lighttext);
+    font-size: 1.5rem;
+    
+}
+.line{
+    height:3px;
+    width:60px;
+    background-color: #ca8a04;
+}
+@media (width < 800px){
+    #aboutus_boundary{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 2.5rem;
+    }
+    .content_about{
+        width:65%;
+       
+        
+    }
+
+}
+@media (width < 550px){
+    .content_about{
+        width:85%;
+    
+        
+    }
+    .maindiv_review{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap:1.8rem;
+    }
+ 
+}
+@media (width < 400px){
+.content_about{
+    width:100%;   
+    
+}
+}
+
+/*-------------------Shop -----------------------*/
+.shop{
+    color: var(--bordercolor);
+    text-align: center;
+    font-size: 2.5rem;
+}
+.firstbox{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1.5em;
+}
+
+#purseimg h1{
+    color:var(--darkjaman-color);
+    font-size: 2.5rem;
+}
+#purseimg p{
+    color:var(--lighttext);
+}
+#purseimg h2{
+    color:rgb(214, 214, 37);
+}
+
+#shoeimg h1{
+    color:var(--darkjaman-color);
+    font-size: 2.5rem;
+}
+#shoeimg p{
+    color:var(--lighttext);
+}
+#shoeimg h2{
+    color:rgb(214, 214, 37);
+}
+
+
+#glassesimg h1{
+    color:var(--darkjaman-color);
+    font-size: 2.5rem;
+}
+#glassesimg p{
+    color:var(--lighttext);
+}
+#glassesimg h2{
+    color:rgb(214, 214, 37);
+}
+.buy_btn{
+    border:none;
+    outline:none;
+    border-radius: 10px;
+    width:80px;
+    padding:5px;
+    background-color:orange;
+    color:white;
+    font-size: 1.5rem;
+}
+.innerdiv{
+    text-align: center;
+}
+.innerdiv:hover{
+    background-color: #F7ECFB;
+    border-radius: 15px;
+    transition: all  1s ease-in-out;
+}
+
+/*-------------------Line 2 -----------------------*/
+.outer_div_line2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1.7em;
+}
+/*-------------------Review -----------------------*/
+#CustomerReview h1{
+    color:var(--bordercolor);
+    font-size: 30px;
+}
+#CustomerReview{
+ background-color:none;
+ 
+}
+.maindiv_review{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap:1.8rem;
+}
+.para_div_cus{
+   
+    width: 27%;
+    
+}
+.para_div_cus p{
+    
+    font-size:17px;
+    color:var(--lighttext);
+
+}
+.last{
+    width:30%;
+    height: 4px;
+    margin: auto;
+    background-color: var(--bordercolor);
+}
+@media (width < 398px){
+   .para_div_cus{
+    width:100%;
+   }
+}
+@media (width < 498px){
+    .para_div_cus{
+     width:60%;
+    }
+} 
+/*--------Contact us-----------------*/
+.contacthead{
+    color:var(--bordercolor);
+
+}
+.divcontact{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+   
+    flex-wrap: wrap;
+}
+.contactinfo table {
+    color:var(--lighttext);
+   
+    
+}
+.inputtag{
+    width:200px;
+    border:2px solid grey;
+    padding: 10px;
+    font-size: 20px;
+    border-radius: 10px;
+}
+.borderstyle_input{
+    margin-top:20px;
+}
+.inputtag_contact button{
+    border: none;
+    outline:none;
+    color:white;
+    background-color: var(--lightjaman-color);
+    padding: 8px;
+    font-size: 25px;
+    border-radius: 9px;
+}
+
+
+
+
